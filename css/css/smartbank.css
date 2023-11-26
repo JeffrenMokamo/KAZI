@@ -1,0 +1,257 @@
+*{
+	list-style: none;
+	text-decoration: none;
+	outline: none;
+}
+body{
+	padding: 0;
+	margin: 0;
+}
+/*page d'acceuil*/
+.menu{
+	width: 100%;
+	height: 60px;
+	display: flex;
+	justify-content: space-between;
+	padding: 10px;
+	background-color: rgba(217,217,217, 0.6);
+}
+.menu .logos{
+	display: flex;
+	align-items: center;
+}
+.menu .logos img{
+	width: 40px;
+	height: 40px;
+	border-radius: 50px;
+}
+.menu .logos h3{
+	margin-top: 10px;
+	font-weight: bold;
+	margin-left: 5px;
+	color: midnightblue;
+	font-family: sans-serif;
+}
+/* style bouton hamberger*/
+.btn-hamberger label{
+	font-size:26px;
+	display: none;
+}
+.btn-hamberger #check{
+	display: none;
+}
+/* media queries*/
+@media screen and (max-width: 1200px){
+	.menu .navbar{
+		flex-direction: column;
+	}
+	 .navbar {
+		position: absolute;
+		left: 0;
+		top: 60px;
+		background:rgba(0,0,0,0.5);
+		width: 100%;
+		transition: 0.8s;
+		transition: 0.8s;
+		transform: translate(-100%);
+	}
+	.btn-hamberger label{
+		font-size:26px;
+		display: block;
+		cursor: pointer;
+	}
+	 #check:checked+.navbar {
+		transform: translate(0)!important;
+	}
+	 .navbar nav ul li{
+		display: block !important;
+		padding: 10px;
+	}
+}
+.menu .logos h3 span{
+	color: skyblue;
+}
+.menu .navbar{
+	display: flex;
+	align-items: center;
+}
+.menu .navbar nav ul li{
+	display: inline-block;
+}
+.menu .navbar nav ul li a{
+	border-radius: 5px;
+	font-weight: bold;
+	width: 150px;
+}
+.menu .navbar nav ul li a button{
+	background-color: skyblue;
+	border-radius: 5px;
+	padding: 5px;
+	border:none;
+	width: 100px;
+}
+.imgacceuil{
+	width: 100%;
+	height: 90.7vh;
+}
+.imgacceuil img{
+	width: 100%;
+	height: 100%;
+}
+.msgacceuil{
+	position: absolute;
+	top: 30%;
+}
+.msgacceuil h1{
+	color: skyblue;
+}
+.msgacceuil p{
+	color: #fff;
+	text-align: justify;
+	font-weight: bold;
+}
+.msgacceuil button{
+	font-weight: bold;
+}
+/*Fin page d'acceuil*/
+
+/*page de contact---------------------------------------------------------*/
+
+.contact{
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(217,217,217);
+}
+.contact .adresse{
+	padding-top: 80px;
+}
+.contact .formcont{
+	background-image: url('../image/pongase.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+.contact .formcont form{
+	width: 80%;
+}
+.contact .formcont form legend{
+	color: #fff;
+}
+.contact .formcont form textarea{
+	height: 250px;
+}
+.mail{
+	color: red;
+}
+.twit{
+	color: skyblue;
+}
+.facebook{
+	color: midnightblue;
+}
+.linked{
+	color: blue;
+}
+.what{
+	color: green;
+}
+.contact .formcont form button{
+	width: 100px;
+	height: 35px;
+	font-weight: bold;
+}
+
+/*Fin page de contact*/
+
+
+/*---------------------------------------ouvrir un compte-------------------------------------*/
+form{
+	width: 70%;
+	margin: auto;
+	margin-bottom: 30px;
+}
+form fieldset{
+	box-shadow: 3px 3px 3px lightblue;
+	border: 1px solid lightgray;
+	margin-bottom: 15px;
+	margin-top: 30px;
+}
+select{
+	height: 32px;
+}
+form center button{
+	width: 120px;
+	font-weight: bold!important;
+}
+/*Fin*/
+
+/*Connexion*/
+
+.connexion{
+	width: 100%;
+	height: 100vh;
+	padding-top:150px;
+	background-color: rgba(217,217,217);
+}
+.connexion form{
+	background-color: #fff;
+	padding: 20px;
+	width: 400px;
+	border-radius: 15px;
+}
+input[type='submit']{
+	background-color: teal;
+	border-radius: 5px;
+	width: 110px;
+	color: #fff;
+	font-weight: bold;
+	height: 35px;
+	border: none;
+}
+.connexion form div{
+	margin-bottom: 20px;
+}
+.connexion form div i{
+	margin-left: 10px;
+	color: teal;
+}
+.erreurnumcompte,.erreurnom,.erreurmail{
+	color: red;
+}
+/*------------A propos-------------*/
+.msgapropos h1{
+	color: midnightblue;
+}
+.msgapropos h2{
+	color: teal;
+}
+.msgapropos h3{
+	color: skyblue;
+}
+.msgapropos{
+	margin-left: 80px;
+}
+.msgapropos p{
+	width: 95%;
+}
+.imgapropos{
+	width: 100%;
+	height: 80.7vh;
+}
+.imgapropos {
+	background:url('../image/comptes.jpg')no-repeat;
+	background-size: cover;
+}
+footer{
+	background-color: black;
+	padding: 50px;
+	clear: both;
+	width: 100%;
+}
+footer .icone i{
+	margin-left: 40px;
+	font-size: 30px;
+	color: #fff;
+}

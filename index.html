@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/pharma.css">
+    <link rel="stylesheet" href="css/css/css/all.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/png" href="images/kazipharma.png">
+    <title>Kazi Pharma</title>
+</head>
+<body>
+    <div id="app">
+        <div class="menu d-flex align-items-center col-md-12">
+            <img src="images/kazipharma.png" alt="">
+            <ul class="nav">
+                <li class="nav-item">   
+                    <a class="nav-link" id="activel" aria-current="page" href="#"><i class="fa-solid fa-home"></i> Maison </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fa-solid fa-about"></i>A propos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="shop.html"><i class="fa-solid fa-shopping-cart"></i>Shop</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="fa-solid fa-service"></i>Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="bi bi-alexa"></i>Découvrir</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fa-solid fa-world"></i>Entreprise</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fa-solid fa-world"></i>Conseils</a>
+                </li>
+              </ul>
+              <div class="sociaux">
+                <button class="btn btn-info"><i class="fa-brands fa-facebook-f"></i></button>
+                <button class="btn btn-info"><i class="fa-brands fa-linkedin-in"></i></button>
+                <button class="btn btn-info"><i class="fa-brands fa-whatsapp"></i></button>
+                <button class="btn btn-info"><i class="fa-brands fa-instagram"></i></button>
+              </div>
+        </div>
+        <!-- <router-view></router-view> -->
+        <div class="accueil col-md-12 d-flex">
+            <div class="txt-acc col-md-5 d-flex  justify-content-center">
+                <h2>Bienvenue !</h2>
+                <p class="col-md-11">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore molestiae repellat, ex adipisci eaque quod voluptatum magnam ea suscipit impedit tenetur saepe et vero blanditiis quibusdam dolor mollitia laboriosam incidunt.</p>
+                <button class="btn btn-info col-md-4">Contacter</button>
+            </div>
+            <img src="images/MicrosoftTeams-image-2-1024x733.png" alt="" class="col-md-7 container-fluid">
+        </div>
+        <div class="acc-about col-md-12 d-flex">
+            <div class="txt-about col-md-7">
+                <h2 class="gras">A propos</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas enim neque ut numquam veritatis architecto possimus. Necessitatibus natus quas animi laborum laboriosam vel voluptates explicabo harum? Deserunt soluta accusantium at!
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro placeat mollitia ad assumenda voluptatem aspernatur excepturi, quo tenetur architecto repudiandae quidem ea ipsa ipsam provident tempore. Ea beatae itaque sapiente.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro placeat mollitia ad assumenda voluptatem aspernatur excepturi, quo tenetur architecto repudiandae quidem ea ipsa ipsam provident tempore. Ea beatae itaque sapiente.
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas enim neque ut numquam veritatis architecto possimus. Necessitatibus natus quas animi laborum laboriosam vel voluptates explicabo harum? Deserunt soluta accusantium at!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, velit. Alias ea distinctio nulla earum placeat quis ullam sit blanditiis repudiandae in, dolores ipsam fuga, id quasi! Voluptatibus, praesentium molestias!</p>
+                <input v-model="message" type="text" placeholder="Nous laisser un message..." class="form-control col-md-7">
+                <button @click="message = '' " class="btn btn-primary col-md-3">Envoyer</button>
+            </div>
+            <div class="col-md-5 txt-gen">
+                <p>{{ message }}</p>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- <script type="text/x-template" id="accueil"> -->
+
+
+    <!-- </script> -->
+    
+    <!-- <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://unpkg.com/vue-router@4"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-cookies@1.8.3/vue-cookies.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <script src="js/pharma.js"></script>
+</body>
+</html>

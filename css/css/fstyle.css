@@ -1,0 +1,175 @@
+*{
+	list-style: none;
+	text-decoration: none;
+	outline: none;
+}
+body{
+	padding: 0;
+	margin:0;
+	font-family: sans-serif;
+}
+@media (max-width: 968px){
+	#menu{
+		position: absolute;
+		display: block!important;
+		left: 90%;
+	}
+	#icone{
+		display: none;
+	}
+	header .menu .barnav ul{
+		
+	}
+	header .menu .barnav nav ul li{
+		display: block!important;
+	}
+	header .menu .barnav .compte ul li{
+		display: block!important;
+	}
+}
+
+/*Debut page d'acceuil*/
+.connexion{
+	background-color: skyblue;
+	color: #fff!important;
+}
+header .menu input{
+	display: none;
+}
+#menu{
+	color: skyblue;
+	font-size: 23px;
+	cursor: pointer;
+	display: none;
+}
+header .menu{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	height: 50px;
+	background-color: #fff;
+	padding: 10px;
+}
+header .menu .logo{
+	display: flex;
+	align-items: center;
+}
+header .menu .logo img{
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+} 
+header .menu .logo h3{
+	color: skyblue;
+	font-weight: bold;
+	margin-left: 5px;
+	margin-top: 5px;
+	text-transform: uppercase;
+}
+header .menu .barnav{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-left: 280px;
+}
+header .menu .barnav nav ul li{
+	display: inline-block;
+	margin-top: 10px;
+}
+header .menu .barnav nav ul li a{
+	color: skyblue;
+	font-weight: bold;
+	padding: 5px;
+	font-size: 13px;
+	transition: 0.5s;
+	text-decoration: none;
+} 
+header .menu .barnav nav ul li a:hover{
+	text-decoration: none;
+	transition: 0.8s;
+	color: grey;
+}
+header .menu .barnav .compte ul li{
+	display: inline-block;
+	margin-top: 10px;
+}
+header .menu .barnav .compte ul li a button{
+	color: skyblue;
+	font-weight: bold;
+	font-size: 13px;
+	outline: none;
+	border:1px solid;
+	background-color: transparent;
+	width: 100px;
+	border-radius: 5px;
+}
+header .menu .barnav .compte ul li a:hover{
+	text-decoration: none;
+}
+.imgfond{
+	width: 100%;
+	height: 100vh;
+	background:url('../images/acceuil.jpg')no-repeat;
+	background-size: cover;
+}
+.msgacceuil{
+	position: absolute;
+	top: 35%;
+}
+.msgacceuil h1{
+	color: #fff;
+	font-weight: bold;
+	font-size: 50px;
+}
+.msgacceuil h1 span{
+	color: skyblue;
+}
+.msgacceuil p{
+	color: #fff;
+	font-size: 20px;
+	font-weight: bold;
+}
+.msgacceuil button{
+	color: #fff;
+	font-weight: bold;
+	background-color: skyblue;
+	outline: none;
+	border:none;
+	border-radius: 5px;
+	height: 35px;
+	font-size: 15px;
+	transition: .7s;
+}
+.msgacceuil button:hover{
+	background-color: grey;
+	transition: 1s;
+}
+
+/*Fin page d'acceuil*/
+
+/*Debut page nous connaitre*/
+
+.diaporama{
+	margin-top: 50px;
+	width: 100%;
+	position:absolute;
+	height: 300px;
+}
+.diaporama img{
+	width: 100%;
+	height: 100%;
+}
+.container{
+	position: absolute;
+	top: 40%;
+}
+.container .contenue{
+	background-color: #fff;
+	border-radius: 5px;
+}
+.titre{
+	position: absolute!important;
+	top: 15%;
+}
+
+/*Fin page nous connaitre*/

@@ -1,0 +1,223 @@
+*{
+	list-style: none;
+	text-decoration: none;
+	outline: none;
+}
+body{
+	padding: 0;
+	margin: 0;
+}
+
+@media (max-width: 968px){
+	.menu .logo{
+		margin-top: 0px;
+	}
+	.menu{
+		flex-direction: column;
+	}
+	#menu{
+		opacity: 1!important;
+		position: absolute;
+		left: 90%;
+		cursor: pointer;
+	}
+	#bars:checked+nav{
+		transform: translate(0);
+		transition: 1s;
+	}
+	.menu nav ul li{
+		display:block!important;
+		margin-bottom: 10px;
+		text-align:center;
+		margin-top: 10px;	
+	}
+	.menu nav{
+		position: absolute;
+		top: 40px;
+		background: #fff;
+		left: 0;
+		width: 100%;
+		text-align: center;
+		height: 35vh;
+		z-index: 100;
+		transition: 1s;
+		transform: translate(-100%);
+	}
+	nav ul{
+		margin-top: -70px;
+	}
+	.menu nav .compte{
+		margin-top: 45px;
+		margin-left: -80px;
+	}
+	.menu nav .compte a{
+		display: block;
+		margin-top: 7px;
+	}
+}
+
+/*Debut page d'acceuil*/
+
+.menu{
+	background-color: #fff;
+	padding: 5px;
+	display: flex;
+	width: 100%;
+	height: 50px;
+	align-items: center;
+}
+.menu .logo{
+	display: flex;
+	align-items: center;
+}
+.menu .logo img{
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	margin-top: -5px;
+}
+.menu .logo h4{
+	font-weight: bold;
+	color: skyblue;
+	text-transform: uppercase;
+	margin-left: 5px;
+	margin-top: 10px;
+}
+nav {
+	display:flex;
+	align-items: center;
+}
+nav ul li{
+	margin-top: 10px;
+	display: inline-block;
+}
+.menu nav ul li a{
+	font-size: 12px;
+	font-weight: bold;
+	color: skyblue;
+	padding: 5px;
+	transition: .5s;
+	text-transform: uppercase;
+}
+.menu nav ul li a:hover{
+	text-decoration: none;
+	color: grey;
+	transition: .8s;
+}
+.menu nav .compte a button{
+	width: 100px;
+	padding: auto;
+	border-radius: 5px;
+	text-transform: uppercase;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 2px;
+	border:1px solid skyblue;
+}
+.inscription{
+	color: skyblue;
+	background-color: #fff;
+}
+.connexion{
+	color: #fff;
+	background-color: skyblue;
+}
+#menu{
+	color: skyblue;
+	font-weight: bold;
+	font-size: 22px;
+	margin-left: 20px;
+	opacity: 0;
+}
+#bars{
+	display: none;
+}
+.imgfond{
+	width: 100%;
+	height: 593px;
+	background-size: cover;
+}
+.imgfond img{
+	width: 100%;
+	height: 100%;
+}
+.msgacceuil{
+	position: absolute;
+	top: 35%;
+}
+.msgacceuil h1{
+	color: #fff;
+	font-size: 50px;
+	font-weight: bold;
+}
+.msgacceuil h1 span{
+	color: skyblue;
+}
+.msgacceuil p{
+	color: #fff;
+	font-size: 16px;
+	font-weight: bold;
+}
+.msgacceuil button{
+	width: 150px;
+	height: 35px;
+	border-radius: 5px;
+	border:none;
+	background-color: skyblue;
+	font-weight: bold;
+	font-size: 13px;
+	color: #fff;
+	transition: .7s;
+}
+.msgacceuil button:hover{
+	background-color: grey;
+	color: #fff;
+	transition: 1s;
+	border:none;
+}
+
+/*Fin page d'acceuil*/
+
+/*debut inscription*/
+
+form{
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 100vh;
+	background-size: cover;
+	background-color: rgba(217,217,217, 0.2);
+}
+form .formulaire fieldset{
+	background-color: #fff;
+	border-radius: 5px;
+	padding: 10px;
+	width: 400px;
+}
+form .formulaire h1{
+	color: skyblue;
+}
+form .formulaire .logo i{
+	font-size: 50px;
+	color: skyblue;
+	margin-bottom: 20px;
+}
+form .formulaire .champs{
+	margin-bottom: 10px;
+}
+form .formulaire fieldset .champs span{
+	background-color: #fff;
+	color: skyblue;
+	border:none;
+	border-bottom: 1px solid skyblue;
+	border-radius: 0px;
+} 
+form .formulaire fieldset .champs input{
+	border:none;
+	outline: none;
+	border-bottom: 1px solid skyblue;
+	border-radius: 0px;
+}
+form .formulaire fieldset button{
+	width: 100%;
+}

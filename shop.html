@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/pharma.css">
+    <link rel="stylesheet" href="css/css/css/all.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/png" href="images/kazipharma.png">
+    <title>Shop kazi pharma</title>
+</head>
+<body>
+    <div id="shop">
+        <div class="menu d-flex align-items-center col-md-12">
+                <img src="images/kazipharma.png" alt="">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html"><i class="fa-solid fa-home"></i> Maison </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa-solid fa-about"></i>A propos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="activel"><i class="fa-solid fa-shopping-cart"></i>Shop</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fa-solid fa-world"></i>Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa-solid fa-world"></i>Découvrir</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa-solid fa-world"></i>Entreprise</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa-solid fa-world"></i>Conseils</a>
+                    </li>
+              </ul>
+              <div class="sociaux">
+                <button class="btn btn-info"><i class="fa-brands fa-facebook-f"></i></button>
+                <button class="btn btn-info"><i class="fa-brands fa-linkedin-in"></i></button>
+                <button class="btn btn-info"><i class="fa-brands fa-whatsapp"></i></button>
+                <button class="btn btn-info"><i class="fa-brands fa-instagram"></i></button>
+              </div>
+            </div>
+
+            <!-- Gestion des produits -->
+            <div class="container-produits">
+                <!-- /* Titre */ -->
+                <h2>Medicaments</h2>
+
+                <!-- // La recherche -->
+
+                <input v-model="searchKey" type="search" id="search" placeholder="Rechercher...">
+                <span v-if="searchKey && filteredList.length >= 1">
+                    {{ filteredList.length }} Résultat<span v-if="filteredList.length >= 2">s</span>
+                </span>
+
+
+
+                <!-- // Affichages des produits -->
+                <div class="card-cart-container">
+                    <div class="card-container">
+
+                        <div v-for="medoc in filteredList" class="card d-flex">
+                            <!-- <div v-for="produit in produits" class="card"> -->
+                            <div class="img-container">
+                                <img v-bind:src="medoc.img" alt="">
+                            </div>
+                            <div class="card-controls">
+                                <h6>{{ medoc.description }}</h6>
+                                <span>{{ medoc.prix }} CDF</span>
+                                <div class="card-icons">
+                                <div class="like-container">
+                                        <input type="checkbox" name="checkbox" v-bind:id="medoc.id"
+                                        :value="medoc.id" 
+                                        @click="setLikeCookie()"
+                                        v-model="liked"> 
+                                        <label id="heart" v-bind:for="medoc.id">
+                                            <i class="fa-solid fa-heart"></i>
+                                        </label>
+                                </div>
+                                <div class="add-to-cart">
+                                    <button id="panier" @click="addToCart(medoc)">
+                                        <i class="fa-solid fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                            </div>     
+                        </div>
+                    </div>
+                </div>
+                <div class="container-panier rounded position-fixed">
+                    <h3>Panier <i class="fa-solid fa-shopping-cart"></i></h3> 
+                    <div v-if="cart.length > 0"  class="shopping-cart" id="shopping-cart">                     
+                        <div v-for="medoc in cart" class="item d-flex align-items-center">
+
+                            <div class="img-container">
+                                <img v-bind:src="medoc.img" alt="" class="rounded"/>
+                            </div>
+                            <div class="item-description">
+                                <h6>{{ medoc.description }}</h6>
+                                <span>{{ medoc.prix }} CDF</span>
+                                <div class="cart-icons">
+                                    <span>Quantité : {{ medoc.quantity }}</span>
+                                    <button @click="cartplusone(medoc)" class="gras">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </button>
+                                    <button @click="cartMinusOne(medoc)" class="gras">
+                                        <i class="fa-solid fa-minus"></i>
+                                    </button>
+                                    <button @click="cartRemoveItem(medoc)" class="gras">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grand-total">
+                        <div class="total">
+                            <h5>Total : <span>{{ cartTotalAcount() }} CDF</span></h5>
+                            <h6>Total articles : {{ TotalProduit() }}</h6>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+    <!-- </script> -->
+    
+    <!-- <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://unpkg.com/vue-router@4"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-cookies@1.8.3/vue-cookies.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <script src="js/pharma.js"></script>
+</body>
+</html>

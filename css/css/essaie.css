@@ -1,0 +1,50 @@
+body{
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+}
+.objet{
+	display: flex;
+	margin-top:200px; 
+	}
+ .b1,.b2,.b3{
+	background-color: black;
+	border-radius: 10px;
+	margin-right: 5px;
+	transition: 2s;
+	animation-name: e;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+
+}
+div{
+	padding: 10px;
+}
+.b1{
+	position: absolute;
+	z-index: 100;
+	animation-name: an;
+	transition: 2s;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+
+	}
+@keyframes an{
+	from{
+		transition: 2s;
+		transform: translateX(23px);
+	}
+	to{
+		transform: translateX(-23px);
+	}
+}
+@keyframes e{
+	from{
+		transition: 2s;
+		transform: translateX(20px);
+	}
+	to{
+		transform: translateX(-20px);
+	}
+}

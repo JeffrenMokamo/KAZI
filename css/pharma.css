@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2? family= Poppins:wght@200 & display=swap');
+
+#activel{
+    color: #0BB7C3!important;
+}
+.gras{
+    font-weight: 600;
+}
+*{
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    padding: 0;
+    margin: 0;
+    font-family: "poppins", sans-serif!important;
+}
+.menu{
+    justify-content: space-around;
+    height: 100px;
+    z-index: 200;
+    position: fixed;
+    top: 0;
+    background-color: #fff;
+    border-bottom: 1px solid rgba(217, 217, 217, .3);
+}
+.menu img{
+    width: 120px;
+    height: 120px;
+}
+.menu ul li a{
+    color: black!important;
+    font-size: 15px!important;
+    font-weight: 600;
+}
+.menu ul li a:hover{
+    color: #0BB7C3!important;
+}
+.accueil{
+    height: 83vh;
+    margin-top: 100px;
+    margin-bottom: 120px;
+}
+.accueil .txt-acc{
+    flex-direction: column;
+    height: 100%;
+    padding: 0 10px 0 70px;
+}
+.accueil .txt-acc button, .menu button{
+    color: #fff;
+}
+.accueil img{
+    height: 100%;
+}
+
+/* Shops */
+.container-produits #search{
+    margin-bottom: 20px;
+    width: 400px;
+    outline: none;
+    height: 35px;
+}
+.container-produits{
+    width: 100%;
+    margin-top: 100px;
+    background-color: rgba(217, 217, 217, .3);
+    padding: 40px 20px 40px 20px;
+    position: relative;
+}
+.card-cart-container{
+    width: 68%;
+}
+.card-cart-container .card-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr)!important;
+    width: 100%;
+}
+.card-cart-container .card-container .card{
+    width: 98%;
+    height: 250px;
+    overflow: hidden;
+    flex-direction: column;
+    margin-bottom: 15px;
+    position: relative;
+    border: 1px solid grey;
+}
+/* .card-cart-container .card-container .card .img-container{
+    overflow: hidden;
+    height: 70%;
+    width: 100%;
+} */
+.card-cart-container .card-container .card .img-container img{
+    height: 70%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    border-bottom: 2px solid grey;
+    transition: .3s ease-in-out;
+    transform: scale(1);
+    cursor: pointer;
+    will-change: transform;
+}
+/* .card-cart-container .card-container .card .img-container img:hover{
+    transform: scale(1.10);
+} */
+.card-cart-container .card-container .card .card-controls{
+    position: relative;
+    height: 30%;
+    width: 100%;
+    margin-top: 80%;
+    /* bottom: 0; */
+}
+.card-cart-container .card-container .card .card-controls h6, .card-cart-container .card-container .card .card-controls span{
+    margin-top: 10px;
+    font-weight: 600;
+    margin-left: 5px;
+}
+.card-cart-container .card-container .card .card-controls .card-icons input{
+    display: none;
+}
+#heart, #panier{
+    position: absolute;
+    bottom: 0;
+}
+#heart{
+    right: 20%;
+    font-size: 17px;
+}
+#panier{
+    right: 2%;
+    border: none;
+    color: skyblue;
+    background-color: transparent;
+}
+.container-produits .container-panier{
+    top: 110px;
+    background-color: skyblue;
+    right: 20px;
+    padding: 20px;
+    width: 30%;
+}
+.container-produits .container-panier h3{
+    color: #fff;
+    margin-bottom: 20px;
+}
+.container-produits .container-panier .shopping-cart .item{
+    width: 100%;
+    margin-bottom: 10px;
+    border-bottom: 2px solid white;
+    padding-bottom: 5px;
+    transition: .8s ease-in-out;
+}
+.container-produits .container-panier .shopping-cart .item .img-container{
+    width: 50%;
+}
+.container-produits .container-panier .shopping-cart .item .img-container img{
+    width: 90%;
+}
+.container-produits .container-panier .shopping-cart .item .item-description{
+    width: 50%;
+    /* margin-left: 20px; */
+    color: #fff;
+}
+.container-produits .container-panier .shopping-cart .item .item-description .cart-icons{
+    display: flex;
+}
+.container-produits .container-panier .shopping-cart .item .item-description .cart-icons button{
+    border: none;
+    border-radius: 50%;
+    color: skyblue;
+    background-color: #fff;
+    font-size: 12px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5px;
+}
+.acc-about{
+    padding-left:70px;
+    width: 100%;
+    height: 80vh;
+}
+.acc-about .txt-about{
+    padding-right: 50px;
+}
+.acc-about .txt-about input, .acc-about .txt-about button{
+    margin-bottom: 10px;
+}
+.acc-about .txt-about h2{
+    margin-bottom: 20px;
+}
+.acc-about .txt-gen{
+    padding: 56px 40px 20px 20px;
+    border-left: 3px solid grey;
+    height: 89%;
+}
+.acc-about .txt-gen p{
+    margin-top: -10px;
+    font-size: 40px;
+    font-family: 550;
+}

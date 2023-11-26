@@ -1,0 +1,30 @@
+nav{
+	margin: 0;
+	padding: 0;
+	background-color: gray;
+	height: 50px;
+}
+nav li{
+		display: inline;
+		list-style: none;
+}
+nav ul{
+	text-align: right;
+	margin-right: 20px;
+	line-height: 50px;
+	font-size: 18px;
+}
+body{
+	background-image: url('../image/IMG-20220812-WA0006.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.a1{
+	font-family: Baskerville Old Face;
+	color: blue;
+	font-style: italic;
+}
+.a2{
+	font-family: Baskerville Old Face;
+	color: orange;
+}
